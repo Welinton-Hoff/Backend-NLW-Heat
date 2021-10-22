@@ -3,7 +3,6 @@ import { CreateMessageService } from "../services/CreateMessageService";
 
 class CreateMessageController {
   async handle(request: Request, response: Response) {
-
     const { message } = request.body;
     const { user_id } = request;
 
@@ -11,8 +10,13 @@ class CreateMessageController {
 
     const result = await service.execute(message, user_id);
 
+    console.log(message)
+    console.log(user_id)
+    console.log(result)
+    console.log(response.json(result))
+
     return response.json(result);
   }
 }
 
-export { CreateMessageController }
+export { CreateMessageController };

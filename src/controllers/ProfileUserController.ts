@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { ProfileUserService } from "../services/ProfileUserService";
 
-class ProfileUserSController {
+class ProfileUserController {
   async handle(request: Request, response: Response) {
     const { user_id } = request;
 
@@ -13,4 +13,4 @@ class ProfileUserSController {
   }
 }
 
-export { ProfileUserSController }
+export { ProfileUserController };
